@@ -176,7 +176,7 @@ input:focus {
     align-items: center;
     border-radius: 30px;
     width: 25vw;
-    height: 22.624434389140273vh;
+    height: 150px;
     background: #dce9f3;
     box-shadow: inset 6px 6px 12px #bbc6cf,
             inset -6px -6px 12px #fdffff;
@@ -233,7 +233,7 @@ input:focus {
     align-items: center;
     border-radius: 30px;
     width: 25vw;
-    height: 22.624434389140273vh;
+    height: 150px;
     background: #dce9f3;
     box-shadow: inset 6px 6px 12px #bbc6cf,
             inset -6px -6px 12px #fdffff;
@@ -246,7 +246,7 @@ input:focus {
     align-items: center;
     border-radius: 30px;
     width: 25vw;
-    height: 22.624434389140273vh;
+    height: 150px;
     background: linear-gradient(145deg, #ebf9ff, #c6d2db);
     box-shadow:  7px 7px 16px #c7d8e6,
              -7px -7px 16px #fdffff;
@@ -395,7 +395,7 @@ input:focus {
 }
 
 .numinfo{
-    /* visibility: hidden; */
+    visibility: hidden;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -409,14 +409,27 @@ input:focus {
     padding: 10px 20px;
     z-index: 1;
     box-shadow: 10px 10px 20px 0px #1d2a3638;
-}
-
-.numinfo>span{
     text-align: center;
     font-size: 13px;
+    font-weight: 500;
 }
 
-.num:hover{
+@keyframes numinfo {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.num>div:hover .numinfo{
+    animation: numinfo .3s linear 0s 1 normal none;
+    visibility: visible;
+    backdrop-filter: blur(5px);
 
 }
 
