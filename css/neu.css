@@ -384,6 +384,7 @@ input:focus {
     justify-content: flex-end;
     width: fit-content;
     height: fit-content;
+    position: relative;
     /* background-color: #31c4fa; */
 }
 
@@ -393,7 +394,27 @@ input:focus {
     color: #304558;
 }
 
+.numinfo{
+    /* visibility: hidden; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 70px;
+    width: 100px;
+    height: fit-content;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.295);
+    /* background: linear-gradient(to top right, #594dfd7a, #68ddef7e); */
+    border-radius: 100px 20px 20px 100px;
+    padding: 10px 20px;
+    z-index: 1;
+    box-shadow: 10px 10px 20px 0px #1d2a3638;
+}
 
+.numinfo>span{
+    text-align: center;
+    font-size: 13px;
+}
 
 .num:hover{
 
@@ -539,8 +560,23 @@ a:active{
 .bars:hover .info1{
     visibility: visible;
     animation: myAnim .3s ease 0s 1 normal forwards;
+    /* exit anime--> */
+    animation: myAnim 1s ease 0s 1 normal forwards;
     backdrop-filter: blur(5px);
 }
+
+/* Exit anime--> */
+@keyframes myAnimexit {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translateX(250px);
+    }
+  }
 
 
 .bars:hover .bardot{
