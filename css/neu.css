@@ -463,7 +463,7 @@ input:focus {
     margin-top:0 ;
     display: block;
     border-radius: 10px;
-    background: #d3e8fa;
+    /* background: #d3e8fa; */
     background: linear-gradient(to right bottom, #d3e8fa, #e3f2ff);
     box-shadow:  11px 5px 40px #abbccb,
              -11px -5px 40px #fbffff;
@@ -594,8 +594,8 @@ a:active{
 
 .bars:hover .bardot{
     border-radius: 25px;
-background: #2db4e6;
-box-shadow:  3px 3px 10px #2492ba,
+    background: #2db4e6;
+    box-shadow:  3px 3px 10px #2492ba,
              -3px -3px 10px #36d6ff;
     width: 10px;
     height: 10px;
