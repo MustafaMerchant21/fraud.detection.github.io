@@ -312,9 +312,9 @@ input:focus {
 .infograph_main{
     margin: 20px 30px;
     border-radius: 20px;
-    background: linear-gradient(to right, #d3e8fa,#e4eef7);
-    box-shadow:  24px 24px 20px #cad6e0,
-             -24px -24px 20px #eefcff;
+    background: linear-gradient(to right, #d5e7f7,#e4eef7);
+    box-shadow:  15px 15px 20px #cad6e0,
+             -15px -15px 20px #e4f6fa;
     /* height: 500px; */
     /* border: 2px solid black; */
 }
@@ -396,10 +396,11 @@ input:focus {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     height: 400px;
     width: 1100px;
     margin: 20px auto;
+    position: relative;
 }
 
 .bars{
@@ -421,12 +422,21 @@ input:focus {
     margin-top:0 ;
     display: block;
     border-radius: 10px;
-    /* background: #d3e8fa; */
+    background: #d3e8fa;
     background: linear-gradient(to right bottom, #d3e8fa, #e3f2ff);
     box-shadow:  11px 5px 40px #abbccb,
              -11px -5px 40px #fbffff;
+    transition: .5s;
+    border: none;
 }
 
+button{
+    cursor: pointer;
+}
+
+a:active{
+    background-color: #000000;
+}
 .date{
     margin-top: 30px;
     color: #1d2a36;
@@ -465,4 +475,56 @@ input:focus {
     height: 6px;
     border-radius: 100%;
     background: #1d2a3683;
+}
+
+.rect:hover{
+    /* background: linear-gradient(to right bottom, #d3e8fa, #e3f2ff);
+    box-shadow:  11px 5px 40px #abbccb,
+             -11px -5px 40px #fbffff; */
+    box-shadow: 0px 0px 20px #31aafa77;
+}
+
+.info1{
+    visibility: hidden;
+    position: absolute;
+    left: 100px;
+    width: 150px;
+    height: fit-content;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.295);
+    /* background: linear-gradient(to top right, #594dfd7a, #68ddef7e); */
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 12px;
+    z-index: 1;
+    box-shadow: 10px 10px 20px 0px #1d2a3638;
+}
+
+@keyframes myAnim {
+    0% {
+      opacity: 0;
+      transform: translateX(250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Description of the last bar is disabled */
+.infolast{
+    visibility: visible;
+    position: absolute;
+}
+
+.bars:hover .info1{
+    visibility: visible;
+    animation: myAnim .3s ease 0s 1 normal forwards;
+    backdrop-filter: blur(5px);
+}
+
+
+.bars:hover body{
+    background-color: #000;
 }
