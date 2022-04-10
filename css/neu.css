@@ -379,6 +379,7 @@ input:focus {
 
 .num{
     margin: 0 20px 70px 20px;
+    cursor: default;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
