@@ -606,3 +606,131 @@ a:active{
     font-size: large;
 }
 
+/* Footer Section */
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.box{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 20px;
+    width: 23%;
+    height: 100px;
+    border-radius: 20px;
+    background: #d5e7f7;
+    box-shadow: inset 5px 5px 10px #b5c4d2,
+    inset -5px -5px 10px #f5ffff;
+    padding: 10px 20px;
+    transition: .5s;
+}
+
+.box:hover{
+    width: 30%;
+    height: 120px;
+}
+
+.box:hover .boxleft>img{
+    width: 70px;
+    height: 70px;
+}
+
+.box:hover .boxright>.value{
+    font-size: 35px;
+}
+
+.box:hover .boxright>.valuetxt{
+    font-size: larger;
+}
+
+.boxleft>img{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    margin-right: 20px;
+    filter: brightness(110%);
+    transition: .5s;
+}
+
+.boxright{
+    display: flex;
+    flex-direction: column;
+    /* margin-right: 20px; */
+    color: #304558;
+}
+
+
+.boxright>.value{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    transition: .5s;
+}
+
+.boxright>.valuetxt{
+    font-size: small;
+    transition: .5s;
+}
+
+.overlay{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /* padding: 20px; */
+    /* background-color: #1d2a36; */
+    background: rgba(255, 255, 255, 0.493);
+    font-size: 14px;
+    color: #304558;
+}
+
+
+.overlay>span{
+    margin-bottom: 20px;
+    border-radius: 20px;
+    transition: .1s;
+    
+}
+
+.overlay>.titletxt{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.box:hover .overlay{
+    visibility: visible;
+    backdrop-filter: blur(5px);
+    /* background: rgba(170, 170, 170, 0.493); */
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  17px 17px 34px #d9d9d9,
+                 -17px -17px 34px #ffffff;
+    animation: entrance .5s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes entrance {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+.box:hover .titletxt{
+    text-shadow: 1px 1px 28px #31c4fa;
+}
